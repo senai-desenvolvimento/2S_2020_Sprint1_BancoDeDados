@@ -30,7 +30,7 @@ GO
 
 CREATE TABLE Trabalho (
 	IdTrabalho INT IDENTITY PRIMARY KEY NOT NULL,
-	Nota DECIMAL,
+	Nota DECIMAL(10, 2),
 
 	-- Colocamos as chaves estrangeiras (FK)
 	IdMateria INT FOREIGN KEY REFERENCES Materia(IdMateria),
@@ -38,7 +38,7 @@ CREATE TABLE Trabalho (
 );
 GO
 
--- Apagamos uma tabela caso necessário
+-- Apagamos uma tabela caso necessï¿½rio
 -- DROP TABLE Aluno;
 -- DROP TABLE Materia;
 -- DROP TABLE Trabalho;
@@ -46,6 +46,6 @@ GO
 -- Alterar a estrutura da tabela Trabalho, incluindo uma coluna nova
 ALTER TABLE Trabalho ADD DataEntrega DATETIME;
 
--- Alteramos e ecluímos uma coluna de teste
+-- Alteramos e ecluï¿½mos uma coluna de teste
 -- ALTER TABLE Trabalho ADD Teste INT;
 -- ALTER TABLE Trabalho DROP COLUMN Teste;
